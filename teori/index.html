@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#7c3aed" />
+    <title>Belajar Tailwind CSS</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <script src="./src/script.js" defer></script>
+  </head>
+  <body class="min-h-screen bg-page text-ink">
+    <div class="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 py-3">
+      <header class="rounded-lg bg-brand px-5 py-3 text-white shadow-sm">
+        <nav class="relative flex items-center justify-between text-sm">
+          <a class="font-bold" href="./index.html#home">MyWebsite</a>
+
+          <button
+            id="menuToggle"
+            type="button"
+            class="inline-flex items-center justify-center rounded-md border border-white/30 p-2 md:hidden"
+            aria-label="Buka menu navigasi"
+            aria-controls="navMenu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+
+          <ul id="navMenu" class="absolute right-0 top-full mt-3 hidden w-48 flex-col gap-2 rounded-lg bg-white p-3 text-ink shadow-lg md:static md:mt-0 md:flex md:w-auto md:flex-row md:items-center md:gap-4 md:bg-transparent md:p-0 md:shadow-none">
+            <li><a class="block hover:underline md:inline-block" href="#home">Home</a></li>
+            <li><a class="block hover:underline md:inline-block" href="#about">About</a></li>
+            <li><a class="block hover:underline md:inline-block" href="./api.html">API</a></li>
+            <li><a class="block hover:underline md:inline-block" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="flex-1">
+        <section id="home" class="my-6 rounded-2xl bg-brand-soft px-5 py-14 text-center sm:py-16">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand">Belajar web dengan mudah</p>
+          <h1 class="mt-3 text-3xl font-bold sm:text-4xl">Learn Tailwind CSS</h1>
+          <p class="mx-auto mt-3 max-w-xl text-sm leading-6 text-muted sm:text-base">Bangun tampilan website yang menarik dan responsif dengan utility class Tailwind CSS.</p>
+          <a class="mt-6 inline-block rounded-lg bg-brand px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-hover" href="#about">Mulai belajar</a>
+        </section>
+
+        <section id="about" class="px-2 py-8 text-center">
+          <p class="text-sm font-semibold text-brand">MENGENAL TAILWIND</p>
+          <h2 class="mt-2 text-2xl font-bold">Belajar, rancang, dan kembangkan</h2>
+          <p class="mx-auto mt-3 max-w-2xl text-sm leading-6 text-muted">Pelajari dasar styling modern melalui materi singkat dan praktik yang bisa langsung diterapkan pada project website.</p>
+        </section>
+
+        <section aria-label="Materi belajar" class="grid grid-cols-1 gap-5 px-2 py-5 md:grid-cols-3">
+          <article class="overflow-hidden rounded-xl border border-line bg-surface shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80" alt="Meja kerja dengan laptop untuk membuat website" />
+            <div class="p-5">
+              <span class="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">Dasar</span>
+              <h3 class="mt-3 text-lg font-bold">Mulai dari HTML</h3>
+              <p class="mt-2 text-sm leading-6 text-muted">Kenali struktur halaman dan cara menambahkan utility class Tailwind pada elemen HTML.</p>
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-xl border border-line bg-surface shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=900&q=80" alt="Tampilan desain website pada layar komputer" />
+            <div class="p-5">
+              <span class="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">Desain</span>
+              <h3 class="mt-3 text-lg font-bold">Susun layout responsif</h3>
+              <p class="mt-2 text-sm leading-6 text-muted">Atur grid, jarak, dan breakpoint agar halaman nyaman dilihat di ponsel maupun desktop.</p>
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-xl border border-line bg-surface shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+            <img class="h-48 w-full object-cover" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Seseorang sedang belajar pemrograman di laptop" />
+            <div class="p-5">
+              <span class="rounded-full bg-brand-soft px-3 py-1 text-xs font-semibold text-brand">Praktik</span>
+              <h3 class="mt-3 text-lg font-bold">Bangun project pertamamu</h3>
+              <p class="mt-2 text-sm leading-6 text-muted">Gabungkan komponen yang sudah dipelajari menjadi landing page sederhana dan siap dikembangkan.</p>
+            </div>
+          </article>
+        </section>
+
+        <section id="contact" class="mx-auto my-8 max-w-md rounded-xl border border-line bg-surface p-5 shadow-sm">
+          <h2 class="text-center text-lg font-bold">Ada pertanyaan?</h2>
+          <p class="mb-4 mt-1 text-center text-sm text-muted">Kirim pesan dan mulai belajar bersama kami.</p>
+          <form id="contactForm" class="flex flex-col items-start gap-3" action="#" method="get" novalidate>
+            <label class="sr-only" for="name">Nama kamu</label>
+            <input class="w-full rounded-lg border border-field-border px-3 py-2 text-sm outline-brand" id="name" name="name" type="text" placeholder="Nama kamu" />
+            <label class="sr-only" for="email">Email</label>
+            <input class="w-full rounded-lg border border-field-border px-3 py-2 text-sm outline-brand" id="email" name="email" type="email" placeholder="Email kamu" />
+            <label class="sr-only" for="message">Pesan</label>
+            <textarea class="min-h-28 w-full rounded-lg border border-field-border px-3 py-2 text-sm outline-brand" id="message" name="message" placeholder="Pesan Anda"></textarea>
+            <button class="rounded-lg bg-brand px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-hover" type="submit">Kirim pesan</button>
+            <p id="formMessage" class="hidden w-full rounded-lg border px-3 py-2 text-sm"></p>
+          </form>
+        </section>
+
+      </main>
+
+      <!-- <footer class="mt-4 rounded-lg bg-footer px-4 py-4 text-center text-sm text-white">
+        © 2026 Belajar Tailwind CSS. Dibuat untuk belajar.
+      </footer> -->
+    </div>
+  </body>
+</html>

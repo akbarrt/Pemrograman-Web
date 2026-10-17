@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#7c3aed" />
+    <title>Data API - Belajar Tailwind CSS</title>
+    <link rel="stylesheet" href="./src/output.css" />
+    <script src="./src/script.js" defer></script>
+    <script src="./src/api.js" defer></script>
+  </head>
+  <body class="min-h-screen bg-page text-ink">
+    <div class="mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 py-3">
+      <header class="rounded-lg bg-brand px-5 py-3 text-white shadow-sm">
+        <nav class="relative flex items-center justify-between text-sm">
+          <a class="font-bold" href="./index.html#home">MyWebsite</a>
+
+          <button
+            id="menuToggle"
+            type="button"
+            class="inline-flex items-center justify-center rounded-md border border-white/30 p-2 md:hidden"
+            aria-label="Buka menu navigasi"
+            aria-controls="navMenu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+
+          <ul id="navMenu" class="absolute right-0 top-full mt-3 hidden w-48 flex-col gap-2 rounded-lg bg-white p-3 text-ink shadow-lg md:static md:mt-0 md:flex md:w-auto md:flex-row md:items-center md:gap-4 md:bg-transparent md:p-0 md:shadow-none">
+            <li><a class="block hover:underline md:inline-block" href="./index.html#home">Home</a></li>
+            <li><a class="block hover:underline md:inline-block" href="./index.html#about">About</a></li>
+            <li><a class="block font-semibold underline md:inline-block" href="./api.html" aria-current="page">API</a></li>
+            <li><a class="block hover:underline md:inline-block" href="./index.html#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="flex-1">
+        <section class="my-6 rounded-2xl bg-brand-soft px-5 py-10 text-center">
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand">Public API</p>
+          <h1 class="mt-2 text-3xl font-bold">Data pengguna</h1>
+          <p class="mx-auto mt-3 max-w-xl text-sm leading-6 text-muted">
+            Contoh mengambil data pengguna dari JSONPlaceholder menggunakan HTTP GET.
+          </p>
+        </section>
+
+        <section id="api-data" class="my-8 rounded-xl border border-line bg-surface p-5 shadow-sm">
+          <div class="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand">Endpoint</p>
+              <h2 class="mt-2 text-lg font-bold">GET /users</h2>
+              <p class="mt-1 break-all text-sm text-muted">https://jsonplaceholder.typicode.com/users</p>
+            </div>
+            <button id="refreshUsers" type="button" class="rounded-lg border border-field-border bg-brand-soft px-3 py-2 text-sm font-semibold text-brand transition hover:bg-brand/10">Refresh data</button>
+          </div>
+
+          <div id="apiStatus" class="mb-4 hidden rounded-lg border border-brand-soft bg-brand-soft px-3 py-2 text-sm text-brand" role="status" aria-live="polite"></div>
+
+          <div class="overflow-x-auto">
+            <table class="min-w-full border-collapse text-left text-sm">
+              <thead>
+                <tr class="border-b border-line bg-brand-soft text-brand">
+                  <th class="px-3 py-2 font-semibold">Nama</th>
+                  <th class="px-3 py-2 font-semibold">Email</th>
+                  <th class="px-3 py-2 font-semibold">Telepon</th>
+                  <th class="px-3 py-2 font-semibold">Website</th>
+                </tr>
+              </thead>
+              <tbody id="userTableBody">
+                <tr>
+                  <td colspan="4" class="px-3 py-5 text-center text-muted">Memuat data...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <!-- <footer class="mt-4 rounded-lg bg-footer px-4 py-4 text-center text-sm text-white">
+        © 2026 Belajar Tailwind CSS. Dibuat untuk belajar.
+      </footer> -->
+    </div>
+  </body>
+</html>

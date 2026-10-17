@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#17112b" />
+    <meta
+      name="description"
+      content="Temukan anime, drama, manga, dan novel favoritmu di FlipPlay."
+    />
+    <title>FlipPlay — Cerita favorit, satu tempat</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="bg-page font-sans text-ink antialiased">
+    <header class="border-b border-line bg-surface">
+      <nav
+        aria-label="Navigasi utama"
+        class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 sm:px-8"
+      >
+        <a href="#home" class="text-2xl font-bold tracking-tight text-brand">
+          Flip<span class="text-ink">Play</span><span class="text-accent">.</span>
+        </a>
+        <ul class="flex items-center gap-4 text-xs font-medium sm:gap-8 sm:text-sm">
+          <li><a class="transition hover:text-brand" href="#home">Beranda</a></li>
+          <li><a class="transition hover:text-brand" href="#pilihan">Pilihan</a></li>
+          <li><a class="transition hover:text-brand" href="#kontak">Kontak</a></li>
+        </ul>
+        <a
+          href="#pilihan"
+          class="hidden rounded-full bg-brand px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-hover sm:inline-block"
+        >
+          Jelajahi
+        </a>
+      </nav>
+    </header>
+
+    <main>
+      <section
+        id="home"
+        class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 sm:px-8 sm:py-20 md:grid-cols-2 md:gap-14"
+      >
+        <div>
+          <p
+            class="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-3 py-1.5 text-xs font-semibold text-brand"
+          >
+            <span class="h-2 w-2 rounded-full bg-accent"></span>
+            Teman cerita di waktu luangmu
+          </p>
+          <h1 class="mt-5 max-w-xl text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+            Satu tempat untuk semua <span class="text-brand">cerita favoritmu.</span>
+          </h1>
+          <p class="mt-5 max-w-lg text-base leading-7 text-muted">
+            Dari anime yang seru sampai novel yang bikin penasaran, temukan
+            hiburan yang kamu suka dalam satu aplikasi.
+          </p>
+          <a
+            href="#pilihan"
+            class="mt-7x inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-hover"
+          >
+            Temukan favoritmu
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+          <div class="mt-9 flex flex-wrap gap-x-7 gap-y-3 text-sm text-muted">
+            <p><span class="font-bold text-ink">Anime</span> pilihan</p>
+            <p><span class="font-bold text-ink">Drama</span> seru</p>
+            <p><span class="font-bold text-ink">Cerita</span> baru</p>
+          </div>
+        </div>
+
+        <div
+          aria-label="Ilustrasi pilihan hiburan FlipPlay"
+          class="relative mx-auto flex min-h-80 w-full max-w-md items-center justify-center overflow-hidden rounded-3xl bg-hero p-6 sm:min-h-96 sm:p-10"
+        >
+          <div aria-hidden="true" class="absolute -right-10 -top-10 h-48 w-48 rounded-full bg-accent/20"></div>
+          <div aria-hidden="true" class="absolute -bottom-16 -left-12 h-56 w-56 rounded-full bg-brand/50"></div>
+          <div class="relative w-full max-w-xs -rotate-2 rounded-2xl border border-white/15 bg-white/10 p-4 shadow-lg backdrop-blur-sm sm:p-5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-semibold uppercase tracking-[0.2em] text-white/70">Pilihan hari ini</span>
+              <span class="rounded-full bg-accent px-2.5 py-1 text-xs font-bold text-ink">01</span>
+            </div>
+            <div class="mt-4 flex h-44 items-end rounded-xl bg-poster p-5 sm:h-52">
+              <div>
+                <span class="rounded-full bg-white/15 px-2.5 py-1 text-xs font-medium text-white">Anime &middot; Petualangan</span>
+                <p class="mt-3 text-3xl font-bold leading-none text-white">Langit<br />Senja</p>
+              </div>
+            </div>
+            <div class="mt-4 flex items-center justify-between gap-3">
+              <div>
+                <p class="font-semibold text-white">Petualangan dimulai</p>
+                <p class="mt-1 text-xs text-white/60">Episode baru setiap minggu</p>
+              </div>
+              <span aria-hidden="true" class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-lg text-ink">&rarr;</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pilihan" class="bg-surface">
+        <div class="mx-auto max-w-6xl px-5 py-14 sm:px-8 sm:py-16">
+          <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+            <div>
+              <p class="text-sm font-semibold text-brand">PILIHAN UNTUKMU</p>
+              <h2 class="mt-2 text-3xl font-bold tracking-tight">Ada cerita untuk setiap suasana.</h2>
+            </div>
+            <p class="max-w-md text-sm leading-6 text-muted">
+              Mau menonton atau membaca? Pilih hiburan yang pas buat harimu.
+            </p>
+          </div>
+
+          <div class="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <article class="rounded-2xl border border-line bg-page p-5 transition hover:-translate-y-1 hover:shadow-md">
+              <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-soft text-2xl" aria-hidden="true">✦</span>
+              <h3 class="mt-5 text-lg font-bold">Anime</h3>
+              <p class="mt-2 text-sm leading-6 text-muted">Ikuti petualangan seru dan kisah penuh imajinasi.</p>
+            </article>
+            <article class="rounded-2xl border border-line bg-page p-5 transition hover:-translate-y-1 hover:shadow-md">
+              <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-soft text-2xl" aria-hidden="true">▶</span>
+              <h3 class="mt-5 text-lg font-bold">Drama</h3>
+              <p class="mt-2 text-sm leading-6 text-muted">Nikmati cerita yang dekat dengan berbagai perasaan.</p>
+            </article>
+            <article class="rounded-2xl border border-line bg-page p-5 transition hover:-translate-y-1 hover:shadow-md">
+              <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-soft text-2xl" aria-hidden="true">▤</span>
+              <h3 class="mt-5 text-lg font-bold">Manga</h3>
+              <p class="mt-2 text-sm leading-6 text-muted">Buka halaman berikutnya dan temukan kejutan baru.</p>
+            </article>
+            <article class="rounded-2xl border border-line bg-page p-5 transition hover:-translate-y-1 hover:shadow-md">
+              <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-soft text-2xl" aria-hidden="true">Aa</span>
+              <h3 class="mt-5 text-lg font-bold">Night novel</h3>
+              <p class="mt-2 text-sm leading-6 text-muted">Temani waktu santai dengan kisah untuk dibaca.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="kontak" class="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 sm:py-16 md:grid-cols-2 md:gap-16">
+        <form action="#" method="get" class="space-y-4">
+          <div>
+            <label for="nama" class="mb-1.5 block text-sm font-medium">Nama</label>
+            <input
+              id="nama"
+              name="nama"
+              type="text"
+              autocomplete="name"
+              placeholder="Nama kamu"
+              required
+              class="w-full rounded-xl border border-line bg-surface px-4 py-3 text-sm outline-none transition placeholder:text-muted/70 focus:border-brand focus:ring-2 focus:ring-brand/15"
+            />
+          </div>
+          <div>
+            <label for="email" class="mb-1.5 block text-sm font-medium">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="nama@email.com"
+              required
+              class="w-full rounded-xl border border-line bg-surface px-4 py-3 text-sm outline-none transition placeholder:text-muted/70 focus:border-brand focus:ring-2 focus:ring-brand/15"
+            />
+          </div>
+          <div>
+            <label for="pesan" class="mb-1.5 block text-sm font-medium">Pesan</label>
+            <textarea
+              id="pesan"
+              name="pesan"
+              rows="4"
+              placeholder="Tulis pesanmu di sini..."
+              required
+              class="w-full resize-y rounded-xl border border-line bg-surface px-4 py-3 text-sm outline-none transition placeholder:text-muted/70 focus:border-brand focus:ring-2 focus:ring-brand/15"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-hover focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2"
+          >
+            Kirim pesan
+          </button>
+        </form>
+              <section id="kontak" class="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 sm:py-16 md:grid-cols-2 md:gap-16">
+        <div>
+          <p class="text-sm font-semibold text-brand">SAPA KAMI</p>
+          <h2 class="mt-2 text-3xl font-bold tracking-tight">Punya cerita atau pertanyaan?</h2>
+          <p class="mt-4 max-w-md text-sm leading-6 text-muted">
+            Kami senang mendengar pendapatmu. Kirim pesan, saran, atau tanyakan
+            apa pun tentang FlipPlay.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-ink text-white">
+      <div class="mx-auto flex max-w-6xl flex-col gap-3 px-5 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <a href="#home" class="text-lg font-bold">FlipPlay<span class="text-accent">.</span></a>
+        <p class="text-sm text-white/60">&copy; 2026 FlipPlay. Temukan cerita favoritmu.</p>
+      </div>
+    </footer>
+  </body>
+</html>
